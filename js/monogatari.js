@@ -1,4 +1,4 @@
-/**
+/**957
  * ====================================
  * I N D E X
  * ====================================
@@ -941,17 +941,21 @@ $_ready(function () {
 	 * ==========================
 	 **/
 
-	// Start game automatically withouth going trough the main menu
+	// Start game automatically without going trough the main menu
 	function showMainMenu () {
-		if (!engine.ShowMenu) {
-			stopAmbient();
-			playing = true;
-			$_("section").hide();
-			$_("#game").show();
-			analyseStatement(label[engine.Step]);
+		if (!engine.Constantsave){
+			if (!engine.ShowMenu) {
+				stopAmbient();
+				playing = true;
+				$_("section").hide();
+				$_("#game").show();
+				analyseStatement(label[engine.Step]);
+			} else {
+				$_("[data-menu='main']").show();
+			}
 		} else {
-			$_("[data-menu='main']").show();
-		}
+			$_("[data-ui='who']").html(replaceVariables(characters[character[0]].Name));
+			loadFromSlot(engine.SaveLabelhidden);
 	}
 
 	/**
