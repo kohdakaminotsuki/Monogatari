@@ -2359,6 +2359,10 @@ $_ready(function () {
 								}
 								$_("[data-character='" + parts[0] + "']").addClass("focus");
 								$_("[data-ui='who']").style("color", characters[parts[0]].Color);
+								$_("[data-ui='text']").style("border-top", characters[character[0]].bordertop);
+                                $_("[data-ui='text']").style("border-bottom", characters[character[0]].borderbottom);
+                                $_("[data-ui='text']").style("border-left", characters[character[0]].borderleft);
+                                $_("[data-ui='text']").style("border-right", characters[character[0]].borderright);
 
 								// Check if the character object defines if the type animation should be used.
 								if (typeof characters[character[0]].TypeAnimation !== "undefined") {
