@@ -1236,9 +1236,11 @@ $_ready(function () {
 	});
 
 	$_("#game [data-action='back'], #game [data-action='back'] *").click(function (event) {
-		event.stopPropagation ();
-		if (canProceed ()) {
-			previous ();
+		if (!engine.Constantsave){
+			event.stopPropagation ();
+			if (canProceed ()) {
+				previous ();
+			}
 		}
 	});
 
@@ -1294,7 +1296,14 @@ $_ready(function () {
 
 				// Left Arrow
 				case 37:
+					if (!engine.Constantsave){
 					previous();
+					};
+					break;
+					
+				// L Key
+				case 76:
+					loadFromSlot(engine.SaveLabelbackup);
 					break;
 
 				// H Key
@@ -1785,6 +1794,11 @@ $_ready(function () {
 									}
 									break;
 
+								case "secretsave":
+									saveToSlot(engine.SaveLabelsecret);
+								case "backupsave":
+									saveToSlot(engine.SaveLabelbackup);
+									
 								case "particles":
 									stopParticles ();
 									break;
