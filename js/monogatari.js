@@ -1,4 +1,4 @@
-/**957
+/**
  * ====================================
  * I N D E X
  * ====================================
@@ -954,7 +954,6 @@ $_ready(function () {
 				$_("[data-menu='main']").show();
 			}
 		} else {
-			$_("[data-ui='who']").html(replaceVariables(characters[character[0]].Name));
 			loadFromSlot(engine.SaveLabelhidden);
 	}
 
