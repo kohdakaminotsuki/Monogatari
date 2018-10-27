@@ -4,7 +4,11 @@ Built to bring Visual Novels to the modern web and take them to the next level, 
 Website: https://monogatari.io/
 
 Demo: https://monogatari.io/demo/
+## Features of this fork
+-Permasave/Permaload option to make player choices maintain consequence and become difficult to undo (to the point the player would likely have to choose between starting over from the beginning by clearing their cache or keeping with their choice) The code for this can be found in the options.js engine section and the monogatari.js quick start section. (this feature is still incomplete and needs to be tested as well as have the home, save, and load buttons blocked.)
 
+-More extensive per-character css options for the text box. To change a component of the textbox per-character put in the css component you want to change without dashes followed by the text you want it to contain. Example "bordertop": "solid green 20px". (currently only has bordertop, borderbottom, borderleft, and borderright.)
+##
 ## Features
 - Responsive out of the box
 - Plays nice with Electron for Desktop apps and Cordova for mobile apps
