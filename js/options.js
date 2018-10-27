@@ -75,7 +75,10 @@ let engine = {
 	// Enables or disables the typing animation for the special centered
 	// character. If the TypeAnimation property was set to false, the centered
 	// character won't shown the animation even if this is set to true.
-	"CenteredTypeAnimation": true
+	"CenteredTypeAnimation": true,
+	
+	// Enables or disables permasave feature, automatically loading the game at start up and blocking access to save, load, mainmenu buttons.
+	"Constantsave": false
 };
 
 // Initial Settings
