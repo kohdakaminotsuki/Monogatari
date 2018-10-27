@@ -2363,6 +2363,23 @@ $_ready(function () {
                                 $_("[data-ui='text']").style("border-bottom", characters[character[0]].borderbottom);
                                 $_("[data-ui='text']").style("border-left", characters[character[0]].borderleft);
                                 $_("[data-ui='text']").style("border-right", characters[character[0]].borderright);
+								$_("[data-ui='text']").style("background", characters[character[0]].background);
+								$_("[data-ui='text']").style("border", characters[character[0]].border);
+								$_("[data-ui='text']").style("border-radius", characters[character[0]].borderradius);
+								$_("[data-ui='text']").style("direction", characters[character[0]].direction);
+								$_("[data-ui='text']").style("font", characters[character[0]].font);
+								$_("[data-ui='text']").style("letter-spacing", characters[character[0]].letterspacing);
+								$_("[data-ui='text']").style("line-height", characters[character[0]].lineheight);
+								$_("[data-ui='text']").style("outline", characters[character[0]].outline);
+								$_("[data-ui='text']").style("text-align", characters[character[0]].textalign);
+								$_("[data-ui='text']").style("color", characters[character[0]].textcolor);
+								$_("[data-ui='text']").style("text-decoration", characters[character[0]].textdecoration);
+								$_("[data-ui='text']").style("text-indent", characters[character[0]].textindent);
+								$_("[data-ui='text']").style("text-shadow", characters[character[0]].textshadow);
+								$_("[data-ui='text']").style("word-spacing", characters[character[0]].wordspacing);
+
+								
+								
 
 								// Check if the character object defines if the type animation should be used.
 								if (typeof characters[character[0]].TypeAnimation !== "undefined") {
