@@ -2320,24 +2320,6 @@ $_ready(function () {
 									$_("[data-ui='who']").html(replaceVariables(characters[character[0]].Name));
 								} else {
 									document.querySelector("[data-ui='who']").innerHTML = "";
-									$_("[data-ui='text']").style("border-top", "");
-                                	$_("[data-ui='text']").style("border-bottom", "");
-                                	$_("[data-ui='text']").style("border-left", "");
-                                	$_("[data-ui='text']").style("border-right", "");
-									$_("[data-ui='text']").style("background", "rgba(0, 0, 0, 0.9)");
-									$_("[data-ui='text']").style("border", "");
-									$_("[data-ui='text']").style("border-radius", "");
-									$_("[data-ui='text']").style("direction", "");
-									$_("[data-ui='text']").style("font", "");
-									$_("[data-ui='text']").style("letter-spacing", "");
-									$_("[data-ui='text']").style("line-height", "");
-									$_("[data-ui='text']").style("outline", "");
-									$_("[data-ui='text']").style("text-align", "left");
-									$_("[data-ui='text']").style("color", "white");
-									$_("[data-ui='text']").style("text-decoration", "");
-									$_("[data-ui='text']").style("text-indent", "");
-									$_("[data-ui='text']").style("text-shadow", "");
-									$_("[data-ui='text']").style("word-spacing", "");
 								}
 								$_("[data-character='" + character[0] + "']").addClass("focus");
 								$_("[data-ui='who']").style("color", characters[character[0]].Color);
@@ -2426,6 +2408,25 @@ $_ready(function () {
 								// The narrator is speaking
 								$_("[data-ui='face']").hide();
 								document.querySelector("[data-ui='who']").innerHTML = "";
+								//used to set narrator textbox style
+								$_("[data-ui='text']").style("border-top", "");
+                                $_("[data-ui='text']").style("border-bottom", "");
+                                $_("[data-ui='text']").style("border-left", "");
+                                $_("[data-ui='text']").style("border-right", "");
+								$_("[data-ui='text']").style("background", "rgba(0, 0, 0, 0.9)");
+								$_("[data-ui='text']").style("border", "");
+								$_("[data-ui='text']").style("border-radius", "");
+								$_("[data-ui='text']").style("direction", "");
+								$_("[data-ui='text']").style("font", "");
+								$_("[data-ui='text']").style("letter-spacing", "");
+								$_("[data-ui='text']").style("line-height", "");
+								$_("[data-ui='text']").style("outline", "");
+								$_("[data-ui='text']").style("text-align", "left");
+								$_("[data-ui='text']").style("color", "white");
+								$_("[data-ui='text']").style("text-decoration", "");
+								$_("[data-ui='text']").style("text-indent", "");
+								$_("[data-ui='text']").style("text-shadow", "");
+								$_("[data-ui='text']").style("word-spacing", "");
 
 								if (typeof engine.NarratorTypeAnimation !== "undefined") {
 									if (engine.NarratorTypeAnimation === true) {
