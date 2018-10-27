@@ -937,11 +937,11 @@ $_ready(function () {
 
 	/**
 	 * ==========================
-	 * Game Quick Start
+	 * Game Quick Start or Permasave
 	 * ==========================
 	 **/
 
-	// Start game automatically without going trough the main menu
+	// Start game automatically without going trough the main menu or activates permaload on startup
 	function showMainMenu () {
 		if (!engine.Constantsave){
 			if (!engine.ShowMenu) {
@@ -954,7 +954,14 @@ $_ready(function () {
 				$_("[data-menu='main']").show();
 			}
 		} else {
-			loadFromSlot(engine.SaveLabelhidden);
+            if (!$_("[data-menu='load'] [data-ui='autoSaveSlots'] [data-ui='slots']").html().trim() == ""){
+               loadFromSlot(engine.SaveLabelhidden);}
+            stopAmbient();
+			playing = true;
+			$_("section").hide();
+			$_("#game").show();
+			analyseStatement(label[engine.Step]);
+	}
 	}
 
 	/**
