@@ -27,6 +27,8 @@ Demo: https://monogatari.io/demo/
 								"text-indent" = "textindent"
 								"text-shadow" = "textshadow"
 								"word-spacing" = "wordspacing"
+								
+- Backup of storage info function in main.js
 ##
 ## Features
 - Responsive out of the box
