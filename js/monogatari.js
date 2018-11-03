@@ -2301,6 +2301,21 @@ $_ready(function () {
 							}
 							break;
 
+							
+						case "backupsave": //entering loadFromSlot(engine.SaveLabelBackup) will restore this save data if it exists.
+                            saveToSlot(engine.SaveLabelBackup);
+                            next();
+                            break;
+							
+                        case "secretsave":
+                            saveToSlot(engine.SaveLabelhidden);
+                            next();
+                            break;
+							
+                        case "secretload":
+                            loadFromSlot(engine.SaveLabelhidden);
+                            break;
+							
 						default:
 							// Default case, used to show the dialog.
 							var character = parts[0].split(":");
