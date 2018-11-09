@@ -1801,11 +1801,6 @@ $_ready(function () {
 									}
 									break;
 
-								case "secretsave":
-									saveToSlot(engine.SaveLabelsecret);
-								case "backupsave":
-									saveToSlot(engine.SaveLabelbackup);
-									
 								case "particles":
 									stopParticles ();
 									break;
@@ -2302,20 +2297,19 @@ $_ready(function () {
 							break;
 
 							
-						case "backupsave": //entering loadFromSlot(engine.SaveLabelBackup) will restore this save data if it exists.
-                            saveToSlot(engine.SaveLabelBackup);
-                            next();
-                            break;
 							
-                        case "secretsave":
-                            saveToSlot(engine.SaveLabelhidden);
-                            next();
-                            break;
-							
-                        case "secretload":
-                            loadFromSlot(engine.SaveLabelhidden);
-                            break;
-							
+					    case "secretsave":
+								saveToSlot(engine.SaveLabelsecret);
+                                next();
+                                break;
+						case "backupsave":
+								saveToSlot(engine.SaveLabelbackup);
+								next();
+                                break;	
+                        case "cookieload":
+                                    storage = document.cookie; 
+                                    next();
+                                    break;
 						default:
 							// Default case, used to show the dialog.
 							var character = parts[0].split(":");
