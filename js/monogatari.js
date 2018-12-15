@@ -2220,6 +2220,13 @@ $_ready(function () {
 							}
 							break;
 
+						case "centerednotype":
+                            $_("[data-ui='text']").hide();
+                            $_("#game").append("<div class='middle align-center' data-ui='centered'></div>");
+                            $_("[data-ui='centered']").html (statement.replace(parts[0] + " ", ""));
+                            break;
+					    
+							
 						case "vibrate":
 							if (navigator) {
 								if (navigator.vibrate) {
